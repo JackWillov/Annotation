@@ -5,13 +5,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-
+@Writer( stringValue = "John", intValue = 12)
 public class User {
-    @Writer( stringValue = "John", intValue = 12)
+
     private String firstName;
-    @Writer( stringValue = "John", intValue = 12)
+
     private String secondName;
-    @Writer( stringValue = "John", intValue = 12)
+
     private int age;
 
 

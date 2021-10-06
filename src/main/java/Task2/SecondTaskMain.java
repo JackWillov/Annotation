@@ -18,16 +18,13 @@ public class SecondTaskMain {
     public static void giveName(User user){
         Field[] fields = user.getClass().getDeclaredFields();
         for (Field field : fields) {
-            Writer writer = field.getAnnotation(Writer.class);
+            Writer writer = user.getClass().getAnnotation(Writer.class);
             field.setAccessible(true);
             if (field.getType() == int.class){
                 field.set(user, writer.intValue());
             } else {
                 field.set(user, writer.stringValue() );
             }
-
-
-
 
         }
         }
